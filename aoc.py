@@ -29,4 +29,4 @@ def ints(s):
     if re.findall(r'\d-\d', s):
         print('Found str matching \\d-\\d:', s)
         sys.exit()
-    return map(int, re.findall(r'-?\d+', s))
+    return list(map(int, re.findall(r'-?\d+', s)))
